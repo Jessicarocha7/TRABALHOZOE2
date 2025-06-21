@@ -1,6 +1,8 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
-// Protótipos das funções de outros arquivos
+
 void jogar();
 void exibir_placar();
 

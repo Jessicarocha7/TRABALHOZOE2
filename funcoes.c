@@ -3,7 +3,6 @@
 #include <string.h>
 #include <time.h>
 
-// Tipos de dados (antes estavam no structs.h)
 typedef enum {
     OCULTA,
     REVELADA,
@@ -22,7 +21,6 @@ typedef struct {
     int pontos;
 } Jogador;
 
-// Protótipos de funções do util.c
 void limpar_buffer();
 void ordenar_pontuacoes();
 int contar_cartas(Carta* inicio);
@@ -127,10 +125,10 @@ void jogar() {
     int pos1, pos2;
 
     printf("Nome do Jogador 1: ");
-    scanf(" %49[^\n]", j1.nome);
+    scanf(" %30[^\n]", j1.nome);
     limpar_buffer();
     printf("Nome do Jogador 2: ");
-    scanf(" %49[^\n]", j2.nome);
+    scanf(" %30[^\n]", j2.nome);
     limpar_buffer();
 
     baralho = criar_baralho();

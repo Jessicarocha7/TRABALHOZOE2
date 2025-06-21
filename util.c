@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-// Tipos de dados duplicados localmente
+
 typedef struct {
     char nome[50];
     int pontos;
@@ -38,14 +38,14 @@ void trocar_valores(Jogador* a, Jogador* b) {
 void ordenar_pontuacoes() {
     FILE* f = fopen("placar.txt", "r");
     if (!f) {
-        printf("Sem placar registrado ainda.\n");
+        printf("Sem placar ainda.\n");
         return;
     }
 
     Jogador lista[100];
     int count = 0;
 
-    while (fscanf(f, " %49[^;];%d\n", lista[count].nome, &lista[count].pontos) == 2) {
+    while (fscanf(f, " %30[^;];%d\n", lista[count].nome, &lista[count].pontos) == 2) {
         count++;
     }
     fclose(f);
